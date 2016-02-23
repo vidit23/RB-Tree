@@ -1,4 +1,4 @@
-#include "rbtree.c"
+#include "rbtree_delete.c"
 #include <stdio.h>
 #include <stdlib.h>
 #define stepspace  4
@@ -17,7 +17,6 @@ int compare_int(void* leftp, void* rightp)
         return 1;
     else
     {
-        assert (left == right);
         return 0;
     }
 }

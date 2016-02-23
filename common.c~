@@ -20,7 +20,7 @@ node grandparent(node n)
 
 node sibling(node n)
 {
- 	   if (n == n->parent->left)
+    if (n == n->parent->left)
         return n->parent->right;
     else
         return n->parent->left;

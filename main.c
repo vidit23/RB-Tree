@@ -3,24 +3,9 @@
 #include <stdlib.h>
 #define stepspace  4
 
-static int compare_int(void* left, void* right);
+
 static void print_tree(rbtree t);
 static void print_tree_helper(rbtree_node n, int step);
-
-int compare_int(void* leftp, void* rightp)
-{
-    int left = (int)leftp;
-    int right = (int)rightp;
-    if (left < right)
-        return -1;
-    else if (left > right)
-        return 1;
-    else
-    {
-        return 0;
-    }
-}
-
 
 void print_tree_helper(rbtree_node n, int step);
 
@@ -126,12 +111,12 @@ main()
         		printf("\nEnter The data tobe Inserted:");
         		scanf("%d",&x);
         		printf("\n___________Inserting___________\n\n");
-        		rbtree_insert(t, (void*)x, compare_int);
+        		rbtree_insert(t, (void*)x);
         		break;
         	case 2:
         		printf("\nEnter The data tobe Deleted:");
         		scanf("%d",&x);
-        		rbtree_delete(t,(void*)x,compare_int);
+        		rbtree_delete(t,(void*)x);
         		break;
         	case 3:
         		print_tree(t);

@@ -1,6 +1,18 @@
 #include "rbtree.h"
 #include <stdlib.h>
 
+int compare(void* leftp, void* rightp)
+{
+    int left = (int)leftp;
+    int right = (int)rightp;
+    if(left < right)
+        return -1;
+    else if (left > right)
+        return 1;
+    else
+        return 0;
+}
+
 node grandparent(node n)
 {
     return n->parent->parent;

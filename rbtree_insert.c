@@ -24,7 +24,7 @@ node new_node(void* key , color node_color, node left, node right)
 }
 
 
-void rbtree_insert(rbtree t, void* key, compare_func compare)
+void rbtree_insert(rbtree t, void* key)
 {
     node inserted_node = new_node(key, RED, NULL, NULL);
     if (t->root == NULL)

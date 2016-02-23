@@ -12,12 +12,10 @@ typedef struct rbtree_t {
     rbtree_node root;
 } *rbtree;
 
-typedef int (*compare_func)(void* left, void* right);
-
 rbtree rbtree_create();
-void* rbtree_lookup(rbtree t, void* key, compare_func compare);
-void rbtree_insert(rbtree t, void* key, compare_func compare);
-void rbtree_delete(rbtree t, void* key, compare_func compare);
+void* rbtree_lookup(rbtree t, void* key);
+void rbtree_insert(rbtree t, void* key);
+void rbtree_delete(rbtree t, void* key);
 typedef rbtree_node node;
 typedef enum rbtree_node_color color;
 
@@ -34,7 +32,7 @@ static void property_5(node root);
 static void property_5_helper(node n, int black_count, int* black_count_path);
 
 static node new_node(void* key, color node_color, node left, node right);
-static node lookup_node(rbtree t, void* key, compare_func compare);
+static node lookup_node(rbtree t, void* key);
 static void rotate_left(rbtree t, node n);
 static void rotate_right(rbtree t, node n);
 

@@ -1,7 +1,7 @@
 #include "rbtree_insert.c"
 #include <stdlib.h>
 
-node lookup_node(rbtree t, void* key, compare_func compare)
+node lookup_node(rbtree t, void* key)
 {
     node n = t->root;
     while (n != NULL)
@@ -23,16 +23,16 @@ node lookup_node(rbtree t, void* key, compare_func compare)
     return n;
 }
 
-void* rbtree_lookup(rbtree t, void* key, compare_func compare)
+void* rbtree_lookup(rbtree t, void* key)
 {
-    node n = lookup_node(t, key, compare);
+    node n = lookup_node(t, key);
     return n == NULL ? NULL : n->key;
 }
 
-void rbtree_delete(rbtree t, void* key, compare_func compare)
+void rbtree_delete(rbtree t, void* key)
 {
     node child;
-    node n = lookup_node(t, key, compare);
+    node n = lookup_node(t, key);
     if (n == NULL)
         return;
     if (n->left != NULL && n->right != NULL)
@@ -41,8 +41,6 @@ void rbtree_delete(rbtree t, void* key, compare_func compare)
         n->key   = pred->key;
         n = pred;
     }
-
-
     child = n->right == NULL ? n->left  : n->right;
     if (node_color(n) == BLACK)
     {

@@ -51,15 +51,15 @@ void rotate_left(rbtree t, node n)
 
 void rotate_right(rbtree t, node n)
 {
-    node L = n->left;
-    replace_node(t, n, L);
-    n->left = L->right;
-    if (L->right != NULL)
+    node l = n->left;
+    replace_node(t, n, l);
+    n->left = l->right;
+    if (l->right != NULL)
     {
-        L->right->parent = n;
+        l->right->parent = n;
     }
-    L->right = n;
-    n->parent = L;
+    l->right = n;
+    n->parent = l;
 }
 
 void replace_node(rbtree t, node oldn, node newn)

@@ -1,15 +1,20 @@
 enum rbtree_node_color { RED, BLACK };
-
+/**
+* @brief Definition of each node in the tree
+*/
 typedef struct rbtree_node_t {
-    void* key;
-    struct rbtree_node_t* left;
-    struct rbtree_node_t* right;
-    struct rbtree_node_t* parent;
-    enum rbtree_node_color color;
+    void* key;                          /*!< Stores the value */
+    struct rbtree_node_t* left;         /*!< Pointer to left child */
+    struct rbtree_node_t* right;        /*!< Pointer to right child */
+    struct rbtree_node_t* parent;       /*!< Pointer to nodes parent */
+    enum rbtree_node_color color;       /*!< Stores the color of the node */
 } *rbtree_node;
 
+/**
+* @brief The pointer to the root of the tree
+*/
 typedef struct rbtree_t {
-    rbtree_node root;
+    rbtree_node root;                   /*!< Root of the Red-Black Tree */
 } *rbtree;
 
 rbtree rbtree_create();

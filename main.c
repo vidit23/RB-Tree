@@ -108,7 +108,7 @@ main()
         switch(j)
         {
             case 1:
-        		printf("\nEnter The data tobe Inserted:");
+        		printf("\nEnter The data to be Inserted:");
         		scanf("%d",&x);
         		printf("\n___________Inserting___________\n\n");
         		rbtree_insert(t, (void*)x);

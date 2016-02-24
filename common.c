@@ -30,7 +30,7 @@ node grandparent(node n)
 }
 
 /**
- * @brief Returns the sibling
+ * @brief Returns the sibling.
  * Parent's other child
  * @param n is the argument.
  */
@@ -43,7 +43,7 @@ node sibling(node n)
 }
 
 /**
- * @brief Returns the parents sibling
+ * @brief Returns the parents sibling.
  * Parent's parent's other child
  * @param n is the argument.
  */
@@ -53,7 +53,7 @@ node uncle(node n)
 }
 
 /**
- * @brief Returns the node's color or if the node is NULL then black
+ * @brief Returns the node's color or if the node is NULL then black.
  * @param n is the argument.
  */
 color node_color(node n)
@@ -62,7 +62,7 @@ color node_color(node n)
 }
 
 /**
- * @brief Perform standard L rotation
+ * @brief Perform standard L rotation.
  * \n      y                              x
  * \n     / \                            / \
  * \n    x  T3                          T1  y
@@ -85,7 +85,7 @@ void rotate_left(rbtree t, node n)
 }
 
 /**
- * @brief Perform standard R rotation
+ * @brief Perform standard R rotation.
  * \n    y                               x
  * \n   / \     Right Rotation          / \
  * \n  x   T3   – – – – – – – >        T1  y
@@ -109,12 +109,12 @@ void rotate_right(rbtree t, node n)
 }
 
 /**
- * @brief Replace a node with another
+ * @brief Replace a node with another.
  * @param t is the tree root
  * @param oldn is the node to be replaced.
  * @param newn is the node which takes it place.
  */
-void replace_node(rbtree t, node oldn, node newn)   
+void replace_node(rbtree t, node oldn, node newn)
 {
 
     if (oldn->parent == NULL)

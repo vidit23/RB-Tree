@@ -29,7 +29,7 @@ node lookup_node(rbtree t, void* key)
 }
 
 /**
- * @brief Searches the tree for the node with value equal to key
+ * @brief Searches the tree for the node with value equal to key.
  * @param t is the tree root.
  * @param key is the key to be equated to.
  */
@@ -71,7 +71,7 @@ void rbtree_delete(rbtree t, void* key)
 }
 
 /**
- * @brief Returns the node with max value in right subtree
+ * @brief Returns the node with max value in right subtree.
  * @param n is the tree root.
  */
 static node maximum_node(node n)
@@ -177,7 +177,7 @@ void delete_case5(rbtree t, node n)
 }
 
 /**
- * @brief End Case
+ * @brief End Case.
  * @param t is the tree root.
  * @param n is the node at which deletion is taking place.
  */
